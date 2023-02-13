@@ -1,0 +1,24 @@
+{{>/common/header}}
+{{>/common/headerEnd}}
+<h2 xmlns="http://www.w3.org/1999/html">Mustache with Spring Boot</h2>
+<div>
+    <center><h4>Employee List:</h4></center>
+    <br/><br/>
+    <table class="table table-striped table-hover">
+        <tr>
+            <th class="table-primary">Employee ID</th>
+            <th class="table-primary">Name</th>
+            <th class="table-primary">Salary</th>
+            <th class="table-primary">Age</th>
+        </tr>
+        {{#employeeList}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{employee_name}}</td>
+                <td>{{employee_salary}}</td>
+                <td>{{employee_age}}</td>
+            </tr>
+        {{/employeeList}}
+    </table>
+</div>
+{{>/common/footer}}
